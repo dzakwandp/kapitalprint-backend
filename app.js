@@ -33,7 +33,9 @@ require('./app/routes/itemRoutes')(app)
 require('./app/routes/blogRoutes')(app)
 require('./app/routes/adminRoutes')(app)
 
-const PORT = 3000
+const PORT = 4000
 app.listen(PORT, () => {
     console.log(`server is running on ${PORT}`)
 })
+
+module.exports=app
