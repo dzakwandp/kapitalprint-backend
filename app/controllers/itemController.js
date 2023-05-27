@@ -22,7 +22,7 @@ exports.create = (req, res) => {
     
     item.save(item)
     .then ((result)=>{
-        res.send(result)
+        res.send(result,{message: "New item was added!"})
     })
     .catch((err)=>{
         res.status(409).send({
