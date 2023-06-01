@@ -71,7 +71,7 @@ exports.update = (req,res)=>{
 exports.delete = (req,res)=>{
     const id = req.params.id
 
-    Blog.findOneAndRemove(id)
+    Blog.deleteOne({_id:id})
     .then((result)=>{
         if(!result){
             res.status(404).send({
