@@ -4,7 +4,8 @@ module.exports = (mongoose)=>{
             username: String,
             name: String,
             password: String,
-            contact: String
+            contact: String,
+            image: String
         },
         { timestamps: true }
     )

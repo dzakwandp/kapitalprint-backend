@@ -8,7 +8,8 @@ exports.register = (req,res)=>{
         username: req.body.username,
         name: req.body.name,
         password: req.body.password,
-        contact: req.body.contact
+        contact: req.body.contact,
+        image: req.body.image
     })
     Admin.findOne({username: admin.username})
     .then((result)=>{
@@ -51,7 +52,8 @@ exports.login = (req,res)=>{
         username: req.body.username,
         name: req.body.name,
         password: req.body.password,
-        contact: req.body.contact
+        contact: req.body.contact,
+        image: req.body.image
     })
     Admin.findOne({
         username: admin.username
