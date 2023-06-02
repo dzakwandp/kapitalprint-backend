@@ -5,7 +5,7 @@ module.exports = (app) =>{
     const router = require('express').Router()
 
     router.post('/register', admin.register)
-    router.get('/admin_login', admin.login)
+    router.post('/admin_login', admin.login)
 
     app.use('/api/admin', router)
 }
