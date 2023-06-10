@@ -48,7 +48,7 @@ exports.findOne  = (req,res) =>{
 exports.update = (req,res)=>{
     const id = req.params.id
 
-    Item.updateOne({_id:id})
+    Item.deleteOne({_id:id}, req.body)
     .then((result)=>{
         if(!result){
             res.status(404).send({
