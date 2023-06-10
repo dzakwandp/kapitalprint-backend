@@ -49,7 +49,7 @@ exports.findOne  = (req,res) =>{
 exports.update = (req,res)=>{
     const id = req.params.id
 
-    Blog.findOneAndUpdate(id, req.body)
+    Blog.updateOne({_id:id}, req.body)
     .then((result)=>{
         if(!result){
             res.status(404).send({
